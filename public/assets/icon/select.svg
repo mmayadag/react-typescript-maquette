@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Triangle</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI-DESK" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HP" transform="translate(-855.000000, -743.000000)" fill="#444444">
+            <g id="Finder" transform="translate(0.000000, 698.000000)">
+                <g id="Select-Secteur" transform="translate(463.000000, 25.000000)">
+                    <polygon id="Triangle" transform="translate(397.000000, 25.000000) scale(1, -1) translate(-397.000000, -25.000000) " points="397 20 402 30 392 30"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

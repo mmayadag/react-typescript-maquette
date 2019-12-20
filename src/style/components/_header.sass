@@ -1,0 +1,95 @@
+@keyframes colorful
+  0%
+    fill: #307EFB
+  20%
+    fill: orange
+  30%
+    fill: pink
+  40%
+    fill: green
+  60%
+    fill: purple
+  70%
+    fill: yellow
+  80%
+    fill: blue
+  100%
+    fill: #307EFB 
+
+.header
+  width: calc(100% - 4em)
+  margin-left: auto
+  margin-right: auto
+  padding-top: 1em
+  padding-bottom: 1em
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  @media screen and (max-width: 768px)
+    width: calc(100% - 2em)
+
+  nav
+    background: $nav-bg-color
+    color: $nav-text-color
+
+  &-details
+    font-size: .75em
+    opacity: .64
+    padding-top: 4px
+
+    @media screen and (max-width: 768px)
+      display: none
+
+  &-logo
+    display: inline-flex
+    align-items: center
+    
+    g
+      color: $nav-text-color
+
+    svg
+      width: 6em
+      height: auto
+
+    &:hover
+      svg
+        & > path:first-child
+          @media screen and (min-width: 768px)
+            animation-duration: .64s
+            animation-name: colorful
+            animation-iteration-count: infinite
+  &-nav
+    $this: &
+
+    ul
+      display: flex
+
+      li
+        position: relative
+        font-size: .875em
+        cursor: pointer
+        user-select: none
+
+        &:not(:last-child)
+          margin-right: .75em
+
+        button:not([class="header-nav__profile"])
+          color: $text-color
+
+    &__profile
+      width: 3em
+      height: 3em
+      border-radius: 50%
+      background-color: $text-color
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      text-transform: uppercase
+      color: $bg-color
+
+    &__profile + button
+      position: absolute
+      right: 4em
+      white-space: nowrap
+      height: 3em

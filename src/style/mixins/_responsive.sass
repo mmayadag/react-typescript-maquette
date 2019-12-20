@@ -1,0 +1,35 @@
+$screen-xs: 340px
+$screen-sm: 767px
+$screen-md: 993px
+$screen-mdpi: 1281px
+$screen-hdpi: 1441px
+$screen-large: 1900px
+
+=xs
+  @media screen and (max-width: #{$screen-xs})
+    @content
+
+=sm
+  @media screen and (max-width: #{$screen-sm})
+    @content
+
+=md
+  @media (max-width: #{$screen-md})
+    @content
+
+=mdpi
+  @media (max-width: #{$screen-mdpi})
+    @content
+
+=hdpi
+  @media (max-width: #{$screen-hdpi})
+    @content
+
+=large
+  @media (max-width: #{$screen-large})
+    @content
+
+// Custom devices
+=custom($width)
+  @media (max-width: $width + "px")
+    @content

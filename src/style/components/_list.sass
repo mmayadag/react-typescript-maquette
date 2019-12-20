@@ -1,0 +1,124 @@
+$list-item-bg: #212a32
+$js-bg-color: #e9d44d
+$css-bg-color: #2173f7
+
+@keyframes init
+  to
+    opacity: 1
+    transform: translateY(0)
+
+.list
+  width: calc(100% - 2em)
+  max-width: 50em
+  margin-left: auto
+  margin-right: auto
+
+  &-item
+    position: relative
+    display: flex
+    align-items: center
+    padding: 1em
+    border-radius: 4px
+    background-color: $list-item-bg
+    color: $text-color
+    transform: scale(1)
+    transition: transform .32s ease
+    opacity: 0
+    transform: translateY(1em)
+    animation-name: init
+    animation-duration: .2s
+    animation-fill-mode: forwards
+    animation-iteration-count: 1
+
+    &:hover
+      transform: scale(1.1)
+
+      @media screen and (max-width: 768px)
+        transform: scale(1)
+
+    &:not(:last-child)
+      margin-bottom: 1em
+
+    &-left
+      margin-right: 1em
+      padding-right: 1em
+
+    &-cta
+      position: absolute
+      z-index: 2
+      top: 0
+      right: 0
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      height: 100%
+      padding-right: 1em
+
+      button
+        color: $text-color
+
+    &__icon
+      width: 3rem
+      height: 3rem
+      font-size: .75em
+      border-radius: 50%
+      display: inline-flex
+      align-items: center
+      justify-content: center
+
+      &--js
+        background-color: $js-bg-color
+        color: $bg-color
+
+      &--css
+        background-color: $css-bg-color
+        color: white
+
+    &__title
+      font-size: 1.32em
+      margin-bottom: .5em
+
+    &-details
+      font-family: $monospace
+      display: inline-flex
+      align-items: center
+      flex-wrap: wrap
+
+      span
+        font-size: .75em
+        
+        &:not(:last-child)
+          margin-right: 1em
+
+    &-tags
+      display: flex
+      flex-wrap: wrap
+      margin-top: 1em
+
+      &__tag
+        background-color: darken($text-color, 30%)
+        color: $text-color
+        padding: 2px 4px
+        border-radius: 4px
+        font-size: .64em
+
+        &:not(:last-child)
+          margin-right: 1em
+
+  &-cta
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 1em
+
+    button
+      color: $text-color
+      font-family: $monospace
+      font-size: .875em
+
+      &:first-child
+        margin-right: 1em
+
+      &.is-deactive
+        opacity: .5
+        pointer-events: none
