@@ -1,13 +1,14 @@
 import React from 'react';
+import Col from 'react-bootstrap/Col';
 
 interface IFooterItem {
     url?: string;
     name: string;
 }
 const FooterMenuItem: React.FC<IFooterItem> = ({ url = "#", name }) => (
-    <div>
+    <Col>
         <a href={url} title={name}>{name}</a>
-    </div>
+    </Col>
 )
 
 export default FooterMenuItem;

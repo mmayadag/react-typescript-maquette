@@ -1,10 +1,44 @@
-.btn
-  background-color: $button-bg-color
+.btn-regular
+  background: $button-bg-color
   color: $bg-color
   font-weight: bold
-  padding: 1em 2em
+  padding: 1rem 2rem
   border-radius: 4rem
   transition: background-color .32s ease-in
+  min-width: 160px
+  height: 3.2rem
 
   &:hover
     background-color: darken($button-bg-color, 10%)
+
+.btn-menu
+  height: 2.4rem
+  justify-content: center
+  align-items: center
+  display: flex
+  padding: 0
+  background: red
+
+.btn-card
+  height: 1.4rem
+  justify-content: center
+  align-items: center
+  display: flex
+  padding: 0
+  background: red
+  min-width: 90px
+  font-size: 0.8rem
+  
+
+.col-search-button.col
+  max-width: 1rem
+  margin-right: 20px
+
+.search-button 
+  background: red
+  background: url('/assets/icon/magnifying-glass.svg')
+  display: block
+  width: 1rem
+  height: 1rem
+  *
+    fill: white

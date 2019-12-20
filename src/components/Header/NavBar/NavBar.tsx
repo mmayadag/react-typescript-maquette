@@ -1,4 +1,5 @@
 import React from 'react';
+import Col from 'react-bootstrap/Col';
 
 interface IMenuProps { items: string[]; }
 
@@ -8,7 +9,7 @@ const NavbarMenu: React.FC<IMenuProps> = ({
 }) => (
         <>
             {items.map(
-                item => (<div>{item}</div>)
+                item => (<Col>{item}</Col>)
             )}
         </>
     );

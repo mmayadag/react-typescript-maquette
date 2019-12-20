@@ -1,13 +1,12 @@
 import React from 'react';
+import Logo from '../Logo/Logo';
 import FooterMenu from './FooterMenu/FooterMenu';
 import Social from './Social/Social';
-import Logo from '../Logo/Logo';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-interface IContainerProps {
-    children: React.ReactNode
-}
 
-const Container: React.FC<IContainerProps> = ({ children }) => (<div className="container">{children}</div>);
 const FooterItems = ["MENTIONS LEGALES", "PLAN DU SITE", "CONTACTS", "NOUR TROUVER"]
 const Footer: React.FC = () => {
     return (
@@ -16,8 +15,14 @@ const Footer: React.FC = () => {
                 <Social />
             </Container>
             <footer>
-                <Logo className="footer-logo" />
-                <FooterMenu items={FooterItems} />
+                <Container>
+                    <Row>
+                        <Col>
+                            <Logo className="footer-logo" />
+                        </Col>
+                        <FooterMenu items={FooterItems} />
+                    </Row>
+                </Container>
             </footer>
         </>
     );

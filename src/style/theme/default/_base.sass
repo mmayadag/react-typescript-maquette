@@ -5,20 +5,30 @@ body
 a 
   color: $text-color
 
-.container
-  padding: 10rem
+.container-column
   display: flex
   justify-content: center
   align-items: center
-  flex-direction: column
+  flex-direction: column 
+  width: 1200px
+  justify-content: space-around
+
+.container-row
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: row 
+  width: 1200px
+  justify-content: space-around
 
 
 h1 
-  font-size: 4.5rem
+  font-size: 4.5rem!important
   color: $header-text-color
 
 p
-  padding: 1rem  
+  padding: 1rem!important
+  display: black  
 
 input[type="email"]
   border: 1px solid $text-color
@@ -26,3 +36,14 @@ input[type="email"]
   border-radius: 4px
   width: 100%
   font-size: 1.5em
+
+
+.nav-menu
+  align-items: center
+  justify-content: center
+  background: #bdbfbe
+  padding: 10px
+  border-radius: 30px
+  color: white
+  font-weight: bold
+  margin-top: 30px
