@@ -1,21 +1,13 @@
 import React, { FC } from 'react';
-
+import Button from '../../Button/Button';
 const Email: FC = () => (
     <input type="email" placeholder="Adresse Email" />
 )
 
-interface IButtonProps {
-    name: string;
-}
-
-const SocialIcon: FC<IButtonProps> = ({ name }) => (<i className={name}></i>);
+const SocialIcon: FC<{ name: string; }> = ({ name }) => (<i className={name}></i>);
 
 const Facebook: FC = () => <SocialIcon name="facebook" />;
 const Twitter: FC = () => <SocialIcon name="twitter" />;
-
-const Button: FC<IButtonProps> = ({ name }) => (
-    <button className="btn">{name}</button>
-);
 
 const Socail: FC = ({ children }) => (
     <>

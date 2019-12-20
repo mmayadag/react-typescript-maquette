@@ -1,11 +1,11 @@
 import React from 'react';
-import { ReactComponent as Logo } from '../../assets/brand/logo@1x.svg';
+import Logo from '../Logo/Logo';
 
 const Header: React.FC = () => {
     return (
         <>
             <div className="header">
-                <Logo id="header-logo" />
+                <Logo className="header-logo" />
                 <nav>
                 </nav>
 

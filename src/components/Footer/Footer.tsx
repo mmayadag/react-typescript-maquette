@@ -1,8 +1,7 @@
 import React from 'react';
 import FooterMenu from './FooterMenu/FooterMenu';
 import Social from './Social/Social';
-
-import { ReactComponent as Logo } from '../../assets/brand/logo@1x.svg';
+import Logo from '../Logo/Logo';
 
 interface IContainerProps {
     children: React.ReactNode

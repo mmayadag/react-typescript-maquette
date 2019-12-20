@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { ReactComponent as LogoSvg } from '../../assets/brand/logo@1x.svg';
 
-const NavBarItem: React.FC = () => <img src='' alt='logo' />;
+const Logo: FC<{ className?: string }> = (props) => (<LogoSvg {...props} />);
 
-export default NavBarItem;
+export default Logo;
