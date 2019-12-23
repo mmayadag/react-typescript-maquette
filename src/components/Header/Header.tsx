@@ -1,5 +1,7 @@
 import React from 'react';
 import Logo from '../Logo/Logo';
+import { ReactComponent as SearchSvg } from '../../assets/icons/magnifying-glass.svg';
+
 import HeroOverlay from '../Hero/HeroOverlay';
 import NavBar from './NavBar/NavBar';
 import Container from 'react-bootstrap/Container';
@@ -21,7 +23,9 @@ const Header: React.FC = () => {
                             </Col>
 
                             <NavBar items={items} />
-                            <Col className="col-search-button"><i className="search-button"></i></Col>
+                            <Col className="col-search-button">
+                                <SearchSvg/>
+                            </Col>
                             <Col><Button name="Inscrivez-vous" className="btn-menu"></Button></Col>
                         </Row>
                     </Container>

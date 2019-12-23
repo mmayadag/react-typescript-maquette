@@ -1,10 +1,15 @@
+.cards
+    padding: 2.5rem
+
 .card1
     display: inline-block
-    width: 300px
-    height: 400px
+    width: 350px
+    height: 450px
+    max-width: 100%
     background: url(/assets/formation1.jpg)
     background-size: cover
     border-radius: 7px
+    margin-bottom: 2rem
 
 .card-overlay
     background: rgba(0, 0, 0, 0.27)
@@ -25,3 +30,28 @@
     padding-left: 20px
     padding-bottom: 14px
     padding-top: 180px
+
+.cards-divider
+    height: 5rem
+    background: $bg-color
+    display: flex
+    align-items: center
+    color: $text-color
+    border-bottom: 1px solid $smoke-white
+    margin-bottom: 1rem
+    
+    .card-select-title
+        display: flex
+        align-items: center
+
+        h2
+            color: red
+            font-size: 1.5rem
+        
+.cards-footer-note
+    color: $text-color
+    opacity: 0.4
+    font-size: 1rem
+    text-align: center
+    padding: 1.5rem
+    padding-top: 0 
