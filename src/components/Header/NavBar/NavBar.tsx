@@ -9,7 +9,7 @@ const NavbarMenu: React.FC<IMenuProps> = ({
 }) => (
         <>
             {items.map(
-                item => (<Col>{item}</Col>)
+                item => (<Col><a href={`#${item}`} title={item}>{item}</a></Col>)
             )}
         </>
     );

@@ -26,6 +26,7 @@ const Header: React.FC = () => {
                         </Row>
                     </Container>
                 </div>
+                <div id="hero-background"></div>
                 <HeroOverlay />
             </div>
         </>
