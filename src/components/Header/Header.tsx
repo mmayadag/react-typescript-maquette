@@ -15,6 +15,8 @@ const Header: React.FC = () => {
     return (
         <>
             <div className="hero">
+                <div id="hero-background"></div>
+                <HeroOverlay />
                 <div className="header">
                     <Container>
                         <Row className="nav-menu">
@@ -30,8 +32,6 @@ const Header: React.FC = () => {
                         </Row>
                     </Container>
                 </div>
-                <div id="hero-background"></div>
-                <HeroOverlay />
             </div>
         </>
     );

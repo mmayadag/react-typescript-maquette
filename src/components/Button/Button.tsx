@@ -5,7 +5,7 @@ interface IButtonProps {
     className?: string;
 }
 
-const Button: FC<IButtonProps> = ({ name, className }) => (
+const Button: FC<IButtonProps> = ({ name, className="" }) => (
     <button className={`btn-regular ${className}`}> {name}</ button>
 );
 

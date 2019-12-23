@@ -4,25 +4,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Selector from './CardsDivider/Selector';
-const Card: FC = () => (
-    <>
-        <div className="card1">
-            <div className="card-overlay">
-                <div className="card-button">
-                    <Button name="Bac Pro" className="btn-card"></Button>
-                </div>
-                <h3>
-                    Technicien Conseil -
-                        <br />
-                    Vente de Produits
-                        <br />
-                    de Jardi
-                </h3>
+import Card , {ICardsProps} from './Card';
 
-            </div>
-        </div>
-    </>
-)
+const CardsData: ICardsProps[] = [
+    {title:'BAC PRO', content:'Technicien Conseil - Vente de Produits de Jardi', className:'card1'},
+    {title:'BAC TECHNO', content:'STAV*<br/> Transformation <br/> Alimentaire', className:'card2'},
+    {title:'BTSA', content:'Dévelopment,<br/> Animation des<br/> Territoires<br/> Ruraux', className:'card3'}
+]
 
 const HeroOverlay: FC = () => (
     <>
@@ -44,15 +32,11 @@ const HeroOverlay: FC = () => (
         </Container>
         <Container className="cards">
             <Row>
+                { CardsData.map(kart => (
                 <Col>
-                    <Card />
+                    <Card {...kart} />
                 </Col>
-                <Col>
-                    <Card />
-                </Col>
-                <Col>
-                    <Card />
-                </Col>
+                )) }
             </Row>
             <Row>
                 <Col className="cards-footer-note">
